@@ -35,7 +35,7 @@ class UserModel(models.Model):
         primary_key=True,)
     full_name = models.CharField(max_length=255, null=True, blank=True)
     role = models.CharField(choices=USER_ROLES, null=True, blank=True, max_length=255, default=Ingener)
-    status = models.CharField(max_length=10, choices=USER_STATUS)
+    status = models.CharField(max_length=10, choices=USER_STATUS, default=Active)
     def __str__(self):
         return f"{self.full_name}"
     
