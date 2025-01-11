@@ -11,7 +11,7 @@ class UserModelSerializer(serializers.Serializer):
     )
     full_name = serializers.CharField(max_length=255, required=False, allow_blank=True)
     role = serializers.ChoiceField(choices=USER_ROLES, required=False)
-    status = serializers.ChoiceField(choices=USER_STATUS)
+    status = serializers.ChoiceField(choices=USER_STATUS, required=False)
 
     def create(self, validated_data):
         # Yangi foydalanuvchi yaratish
