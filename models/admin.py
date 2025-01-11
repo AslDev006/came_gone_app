@@ -21,3 +21,5 @@ class CheckingAdmin(admin.ModelAdmin):
 
 # python manage.py runserver
 # celery -A config worker --loglevel=info
+
+
